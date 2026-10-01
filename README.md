@@ -1,67 +1,24 @@
-# Flash-Card-Generator
-🧠 AI Flashcard Generator — Hugging Face
-A simple GenAI mini-project that converts study notes or a topic into structured flashcards using a Hugging Face-hosted LLM.
+Flashy: AI Flashcard Generator
+A web application that automatically generates interactive flashcards from articles and YouTube videos using AI.
 
-Features
-Generate 3–15 flashcards
-Easy / Medium / Hard difficulty
-Uses Hugging Face Inference API
-Structured JSON output
-Streamlit user interface
-Suitable as a GenAI mini-project
-1. Install Python
-Use Python 3.10+.
-
-2. Install dependencies
+✨ Features
+Article Processing: Convert blog posts/articles to flashcards
+YouTube Support: Create flashcards from video transcripts
+Responsive Design: Grid-based card layout that works on mobile/desktop
+Flip Animation: Smooth card-flip transition for Q/A
+Customizable Count: Choose number of flashcards (1-10)
+Error Handling: Clear messages for invalid URLs/API failures
+Installation
+Clone Repository
+git clone https://github.com/arpitingle/flashy.git
+cd flashy
+Install Dependencies
 pip install -r requirements.txt
-3. Create a Hugging Face token
-Create an access token from your Hugging Face account and give it the permissions required for inference.
-
-Then set the environment variable.
-
-Windows PowerShell
-$env:HF_TOKEN="hf_your_token_here"
-$env:HF_MODEL="meta-llama/Llama-3.1-8B-Instruct"
-macOS / Linux
-export HF_TOKEN="hf_your_token_here"
-export HF_MODEL="meta-llama/Llama-3.1-8B-Instruct"
-Do not put your real token inside GitHub or share it publicly.
-
-4. Run
-streamlit run app.py
-Then open the local Streamlit address shown in the terminal.
-
-Project structure
-flashcard_generator/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .env.example
-│
-└── app/
-    ├── __init__.py
-    └── generator.py
-How it works
-User notes/topic
-      ↓
-Streamlit UI
-      ↓
-Prompt engineering
-      ↓
-Hugging Face Inference API
-      ↓
-LLM generates JSON
-      ↓
-JSON parser
-      ↓
-Interactive flashcards
-Possible upgrades
-PDF upload using PyMuPDF
-MCQ mode
-Spaced-repetition revision
-Flashcard database with SQLite
-User accounts
-Export to CSV/PDF
-Automatic topic detection
-Difficulty adaptation based on answers
+Config
+Create .env File
+# Required
+OPENROUTER_API_KEY=your_openrouter_key_here
+Get API Key Create free account at OpenRouter.ai Navigate to Keys Page Generate new key and paste into .env
+Start
+python app.py
+Flashcard Demo
